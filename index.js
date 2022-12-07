@@ -10,7 +10,8 @@ mongoose.set('strictQuery', true);
 main().catch(err => console.log('Database Error',err));
 
 async function main() {
-  await mongoose.connect('mongodb://localhost:27017/Contact');
+  // console.log(p)
+  await mongoose.connect(`mongodb+srv://a7coder:${process.env.pw}@portfolio.l6fr7hn.mongodb.net/Contact`);
   console.log('Database Connected')
 }
 
