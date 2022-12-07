@@ -28,6 +28,10 @@ app.use((err, req, res, next) => {
   res.status(500).json(`${err}`);
 });
 
+app.get('/',(req,res)=>{
+  res.send("it works")
+})
+
 app.listen(8000, () => {
   console.log("Listening on Port 8000");
 });
