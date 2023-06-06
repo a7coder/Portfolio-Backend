@@ -6,13 +6,9 @@ var validateEmail = function (email) {
   return re.test(email);
 };
 
-moment.tz.add("Asia/Calcutta|HMT BURT IST IST|-5R.k -6u -5u -6u|01232|-18LFR.k 1unn.k HB0 7zX0");
-moment.tz.link("Asia/Calcutta|Asia/Kolkata");
-
-const timezone = moment.tz(Date.now(), "Asia/Calcutta|Asia/Kolkata");
 
 const contact_schema = mongoose.Schema({
-  date: { type: Date, default: timezone },
+  default: moment().utcOffset("+05:30").format(),
   name: {
     type: String,
     required: true,
