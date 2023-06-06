@@ -11,7 +11,7 @@ var validateEmail = function (email) {
 const contact_schema = mongoose.Schema({
   date: {
     type: Date,
-    default: moment().tz('Asia/Kolkata').format(), // Set the default date to the current date and time in Indian time zone
+    default: moment().tz('Asia/Kolkata').format('YYYY-MM-DD HH:mm:ss'), // Set the default date to the current date and time in Indian time zone
   },
   name: {
     type: String,
