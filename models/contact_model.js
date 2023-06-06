@@ -6,6 +6,7 @@ var validateEmail = function (email) {
 };
 
 const contact_schema = mongoose.Schema({
+  date: { type: Date, default: Date.now },
   name: {
     type: String,
     required: true,
@@ -22,6 +23,7 @@ const contact_schema = mongoose.Schema({
     required: true,
     minLength: 10,
   },
+
 });
 
 
