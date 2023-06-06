@@ -7,8 +7,12 @@ var validateEmail = function (email) {
 };
 
 
+
 const contact_schema = mongoose.Schema({
-  default: moment().utcOffset("+05:30").format(),
+  date: {
+    type: Date,
+    default: moment().utcOffset("+05:30").format(), // Set the default date to the current date and time in Indian time zone
+  },
   name: {
     type: String,
     required: true,
